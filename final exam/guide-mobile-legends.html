@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Legends Guide • Cuestas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      padding: 2rem clamp(1rem, 5vw, 4rem);
+    }
+    h1, h2 {
+      color: #2ecc71;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .section { margin-bottom: 3rem; }
+    img.responsive {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      display: block;
+    }
+    ul { padding-left: 1.5rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    a.back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #2ecc71;
+      color: #121212;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .loader {
+      position: fixed; inset: 0;
+      background: #121212;
+      color: #2ecc71;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+<div class="loader" id="loader">
+    <p>Loading Mobile Legends Guide…</p>
+  </div>
+
+<main id="content" style="display:none;">
+  <h1>📱 Mobile Legends: Bang Bang – Gamer's Guide</h1>
+
+  <div class="section">
+    <h2>🌟 Overview</h2>
+    <p>Mobile Legends: Bang Bang (MLBB) is a popular 5v5 mobile MOBA made for quick matches and strategic team play, especially in Southeast Asia.</p>
+    <img src="https://lol.fandom.com/api.php?action=stream&stream=File%3AMobile_Legends_Bang_Bang_logo.svg" alt="MLBB Logo" class="responsive">
+  </div>
+
+  <div class="section">
+    <h2>🔰 Role Breakdown</h2>
+    <ul>
+      <li><strong>Tank/Support</strong> – Initiates and protects (e.g., Tigreal, Angela)</li>
+      <li><strong>Fighter</strong> – Durable damage dealers (e.g., Chou, Aldous)</li>
+      <li><strong>Assassin</strong> – Burst flankers (e.g., Gusion, Lancelot)</li>
+      <li><strong>Marksman</strong> – Late-game damage (e.g., Karrie, Claude)</li>
+      <li><strong>Mage</strong> – Area spells and burst (e.g., Lunox, Valir)</li>
+    </ul>
+    <div class="grid">
+      <img src="https://lol.fandom.com/api.php?action=stream&stream=File%3AKarrie_loading.jpg" alt="Marksman: Karrie">
+      <img src="https://lol.fandom.com/api.php?action=stream&stream=File%3ADigger_loading.jpg" alt="Tank: Tigreal">
+      <img src="https://lol.fandom.com/api.php?action=stream&stream=File%3AGusion_loading.jpg" alt="Assassin: Gusion">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>💡 Beginner Tips</h2>
+    <ul>
+      <li>Focus on last‐hitting minions for gold important for Marksman gameplay.</li>
+      <li>Wards and vision make a massive difference—use them smartly.</li>
+      <li>Use hero combos: tank + carry works well.</li>
+      <li>Join team fights at dragon or turtle objectives.</li>
+      <li>Don’t overextend alone—stick with your team.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📍 Land of Dawn Map Overview</h2>
+    <p>Understand Lane structure and Jungle camps from this official Riot-hosted map:</p>
+    <img
+      src="https://lol.fandom.com/api.php?action=stream&stream=File%3ALand_of_Dawn_Map.jpg"
+      alt="Land of Dawn map"
+      class="responsive"
+    >
+  </div>
+
+  <a href="gaming-guide.html" class="back-btn">← Back to Guide Gallery</a>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+    }, 1500);
+  });
+</script>
+
+</body>
+</html>
