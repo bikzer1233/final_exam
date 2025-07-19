@@ -59,7 +59,14 @@
   </style>
 </head>
 <body>
-
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-bar-wrapper">
+    <p class="loading-title">Loading: League of Legends Guide</p>
+    <div class="loading-bar-bg">
+      <div class="loading-bar-fill" id="loadingFill"></div>
+    </div>
+  </div>
+</div>
   <h1>🧙‍♂️ League of Legends - Beginner’s Guide</h1>
 
   <div class="section">
@@ -67,7 +74,7 @@
     <p>
       League of Legends (LoL) is a 5v5 multiplayer online battle arena (MOBA) where two teams fight to destroy the other team’s Nexus. Choose from 160+ champions, each with unique abilities and roles.
     </p>
-    <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltc8dd0ecba1bc1c0c/5f9caa3553887b3a4db95a6a/lol-logo.jpg" alt="LoL Logo" class="responsive">
+    <img src="https://i0.wp.com/highschool.latimes.com/wp-content/uploads/2021/09/league-of-legends.jpeg?fit=1607%2C895&ssl=1" alt="LoL Logo" class="responsive">
   </div>
 
   <div class="section">
@@ -80,11 +87,13 @@
       <li><strong>Support (Bot)</strong> – Protect and enable ADC (e.g. Thresh, Leona)</li>
     </ul>
     <div class="grid">
-      <img src="https://cdn1.dotesports.com/wp-content/uploads/2021/06/29201106/jinx.jpg" alt="Jinx">
-      <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt731efcce9f9f21d1/5eeb7a872a704e5ad7f4ab1e/062320_FiddlesticksChampionTheme_Header.jpg" alt="Fiddlesticks">
-      <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltcc8a674ae1e96ac6/60e88a6b210fa145c49470ab/Yone_Splash.jpg" alt="Yone">
-    </div>
-  </div>
+  <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Garen_0.jpg" alt="Top Lane" class="responsive">
+  <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_0.jpg" alt="Jungle" class="responsive">
+  <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg" alt="Mid Lane" class="responsive">
+  <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_0.jpg" alt="ADC" class="responsive">
+  <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leona_0.jpg" alt="Support" class="responsive">
+</div>
+
 
   <div class="section">
     <h2>🎯 Beginner Tips</h2>
@@ -105,10 +114,29 @@
       <li><strong>Dragons</strong> – Provide team-wide bonuses</li>
       <li><strong>Turrets & Inhibitors</strong> – Defend the base</li>
     </ul>
-    <img src="https://static.wikia.nocookie.net/leagueoflegends/images/e/e3/Summoner%27s_Rift_Map.png" alt="Summoner's Rift Map" class="responsive">
+    <img
+    src="https://wiki.leagueoflegends.com/en-us/images/thumb/Summoner%27s_Rift_map_s14.png/1200px-Summoner%27s_Rift_map_s14.png?172d7"
+    alt="Summoner’s Rift Map (Season 14)"
+    class="responsive"
+  >
+
   </div>
 
   <a href="gaming-guide.html" class="back-btn">← Back to Guide Gallery</a>
 
+
+  <script>
+  window.addEventListener("load", () => {
+    const loadingScreen = document.getElementById("loadingScreen");
+
+    // Allow bar animation to complete before fading out
+    setTimeout(() => {
+      loadingScreen.style.opacity = "0";
+      setTimeout(() => {
+        loadingScreen.style.display = "none";
+      }, 1000); // Wait for CSS transition
+    }, 2500); // Matches loading bar animation (2.5s)
+  });
+</script>
 </body>
 </html>
