@@ -60,6 +60,16 @@
 </head>
 <body>
 
+    <div class="loading-screen" id="loadingScreen">
+  <div class="loading-bar-wrapper">
+    <p class="loading-title">Loading: Valorant Guide</p>
+    <div class="loading-bar-bg">
+      <div class="loading-bar-fill" id="loadingFill"></div>
+    </div>
+  </div>
+</div>
+
+
   <h1>🎯 Valorant - Complete Beginner’s Guide</h1>
 
   <div class="section">
@@ -109,6 +119,20 @@
   </div>
 
   <a href="gaming-guide.html" class="back-btn">← Back to Guide Gallery</a>
+
+  <script>
+  window.addEventListener("load", () => {
+    const loadingScreen = document.getElementById("loadingScreen");
+
+    // Allow bar animation to complete before fading out
+    setTimeout(() => {
+      loadingScreen.style.opacity = "0";
+      setTimeout(() => {
+        loadingScreen.style.display = "none";
+      }, 1000); // Wait for CSS transition
+    }, 2500); // Matches loading bar animation (2.5s)
+  });
+</script>
 
 </body>
 </html>
