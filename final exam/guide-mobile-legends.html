@@ -57,9 +57,14 @@
 </head>
 <body>
 
-<div class="loader" id="loader">
-    <p>Loading Mobile Legends Guide…</p>
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-bar-wrapper">
+    <p class="loading-title">Loading: Mobile Legends Guide</p>
+    <div class="loading-bar-bg">
+      <div class="loading-bar-fill" id="loadingFill"></div>
+    </div>
   </div>
+</div>
 
 <main id="content" style="display:none;">
   <h1>📱 Mobile Legends: Bang Bang – Gamer's Guide</h1>
@@ -110,12 +115,20 @@
   <a href="gaming-guide.html" class="back-btn">← Back to Guide Gallery</a>
 </main>
 
+
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("load", () => {
+    const loadingScreen = document.getElementById("loadingScreen");
+    const content = document.getElementById("content");
+
+    // Allow bar animation to complete before fading out
     setTimeout(() => {
-      document.getElementById('loader').style.display = 'none';
-      document.getElementById('content').style.display = 'block';
-    }, 1500);
+      loadingScreen.style.opacity = "0";
+      content.style.display = "block"; // ✅ Reveal the content
+      setTimeout(() => {
+        loadingScreen.style.display = "none";
+      }, 1000); // Remove from DOM after fade
+    }, 2500); // Sync with loading animation
   });
 </script>
 
