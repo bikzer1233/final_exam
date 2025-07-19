@@ -34,14 +34,11 @@ function openProject(page) {
     // Fallback: direct open if loading screen missing
     window.location.href = page;
   }
+  
 }
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const loadingScreen = document.getElementById("loadingScreen");
-  setTimeout(() => {
-    loadingScreen.classList.add("fade-out");
-    setTimeout(() => loadingScreen.style.display = "none", 1000);
-  }, 3000); // show loading for 3 seconds
-});
+ 
+
+
 
