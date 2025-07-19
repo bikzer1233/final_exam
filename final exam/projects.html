@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Cuestas Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="container">
+    <div class="logo">Cuestas • Game Dev</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About Me</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>My Projects</h1>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left" onclick="scrollCarousel(-1)">&#10094;</button>
+      <div class="carousel" id="carousel">
+        <div class="project-card" onclick="location.href='united-leap.html'">
+            <img src="https://via.placeholder.com/400x200?text=United+Leap" alt="United Leap">
+            <h3>United Leap</h3>
+            </div>
+        <div class="project-card" onclick="openModal('Filibrena 1521X', 'Historical gun-magic FPS.', 'https://via.placeholder.com/600x300?text=Filibrena+1521X')">
+          <img src="https://via.placeholder.com/400x200?text=Filibrena+1521X" alt="Filibrena">
+          <h3>Filibrena 1521X</h3>
+        </div>
+        <div class="project-card" onclick="openModal('Top-Down Survival', '3D zombie wave survival.', 'https://via.placeholder.com/600x300?text=Top+Down')">
+          <img src="https://via.placeholder.com/400x200?text=Top+Down" alt="Top Down">
+          <h3>Top-Down Survival</h3>
+        </div>
+        <!-- Add more project-card blocks as needed -->
+      </div>
+      <button class="carousel-btn right" onclick="scrollCarousel(1)">&#10095;</button>
+    </div>
+  </main>
+
+  <footer class="container">
+    <p>© 2025 Gilbert R. Cuestas Jr. | Built with HTML, CSS & JS</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <img id="modal-image" src="" alt="Preview" />
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <script src="projects.js"></script>
+</body>
+</html>

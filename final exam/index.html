@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cuestas • Game Dev Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+
+ <div class="loading-screen" id="loadingScreen">
+  <div class="loading-bar-wrapper">
+    <p>Loading...</p>
+    <div class="loading-bar">
+      <div class="loading-progress" id="loadingProgress"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <header class="container">
+    <div class="logo"><h1>Cuestas • GameDev</h1></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gaming-guide.html">Gaming Guide</a>
+      <a href="about.html">About Me</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Crafting Immersive Worlds in Unity</h1>
+      <p>I'm Gilbert R. Cuestas Jr., a passionate game developer focused on engaging gameplay, AI systems, and interactive environments.</p>
+      <button class="btn" onclick="location.href='#projects'">View Projects</button>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>A game developer with a focus on Unity-based development, gameplay mechanics, and AI logic. Currently pursuing a career in interactive media design and immersive storytelling.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="carousel-controls">
+        <button id="scroll-left">&#9664;</button>
+        <button id="scroll-right">&#9654;</button>
+      </div>
+
+      <div class="project-carousel" id="project-carousel">
+        <div class="project-card" onclick="openProject('united-leap.html')">
+          <img src="https://via.placeholder.com/400x200?text=United+Leap" alt="">
+          <div class="info">
+            <h3>United Leap</h3>
+            <p class="description">A multiplayer 2D platformer with physics-based cooperative mechanics.</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openProject('filibrena-1521x.html')">
+          <img src="https://via.placeholder.com/400x200?text=Filibrena+1521X" alt="">
+          <div class="info">
+            <h3>Filibrena 1521X</h3>
+            <p class="description">FPS with gun-magic combat, featuring Philippine history-inspired lore.</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openProject('topdown-survivor.html')">
+          <img src="https://via.placeholder.com/400x200?text=Topdown+Survivor" alt="">
+          <div class="info">
+            <h3>Topdown Survivor</h3>
+            <p class="description">A 3D top-down survival game where waves of enemies intensify over time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form class="contact-form">
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Message"></textarea>
+      </form>
+      <button class="btn">Send Message</button>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>© 2025 Cuestas • Built with HTML & CSS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
