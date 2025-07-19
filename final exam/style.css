@@ -287,3 +287,35 @@ p {
   background: #2ecc71;
   transition: width 0.3s;
 }
+
+
+.loading-title {
+  margin-bottom: 1rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.loading-bar-bg {
+  width: 80%;
+  max-width: 400px;
+  height: 20px;
+  background: #2a2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  background: #2ecc71;
+  width: 0%;
+  animation: fillBar 2.5s forwards;
+}
+
+@keyframes fillBar {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
