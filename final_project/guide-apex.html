@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apex Legends Guide • Cuestas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      padding: 2rem clamp(1rem, 5vw, 4rem);
+    }
+    h1, h2 {
+      color: #2ecc71;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .section { margin-bottom: 3rem; }
+    img.responsive {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      display: block;
+    }
+    ul { padding-left: 1.5rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    a.back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #2ecc71;
+      color: #121212;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      background: #121212;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #2ecc71;
+      z-index: 9999;
+      flex-direction: column;
+      transition: opacity 1s ease;
+    }
+    .loading-bar-wrapper {
+      text-align: center;
+    }
+    .loading-title {
+      margin-bottom: 1rem;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+    }
+    .loading-bar-bg {
+      width: 80%;
+      max-width: 400px;
+      height: 20px;
+      background: #2a2a2a;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .loading-bar-fill {
+      height: 100%;
+      background: #2ecc71;
+      width: 0%;
+      animation: fillBar 2.5s forwards;
+    }
+    @keyframes fillBar {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-bar-wrapper">
+    <p class="loading-title">Loading: Apex Legends Guide</p>
+    <div class="loading-bar-bg">
+      <div class="loading-bar-fill"></div>
+    </div>
+  </div>
+</div>
+
+<main id="content" style="display:none;">
+  <h1>🏹 Apex Legends – Heroic Battle Royale</h1>
+
+  <div class="section">
+    <h2>🧭 Overview</h2>
+    <p>Apex Legends is a fast-paced battle royale developed by Respawn Entertainment. Teams of 3 compete in high-tech arenas using unique characters called Legends, each with special abilities.</p>
+    <img src="https://images.ctfassets.net/rporu91m20dc/6EADJt0lg6SaEVW7sLvPFz/f0d7b5fa75b40484c3617793f7e620a3/algs-2024.jpeg" alt="Apex Arena" class="responsive">
+  </div>
+
+  <div class="section">
+    <h2>🎯 Game Mechanics</h2>
+    <ul>
+      <li><strong>Squad-based combat</strong>: 3-player teams with voice or ping comms</li>
+      <li><strong>Unique Legends</strong>: Choose from heroes like Wraith, Bloodhound, and Lifeline</li>
+      <li><strong>Quick revives & respawns</strong>: Keep the fight going even after death</li>
+      <li><strong>Fast-paced sliding, climbing, and zipping</strong></li>
+    </ul>
+    <div class="grid">
+      <img src="https://images.ctfassets.net/rporu91m20dc/6vNfJPHrgC7jBa1FeYVks2/2188400e4c3d90ddcfd6a4cc2ff2c3e2/Legends_lineup.jpg" alt="Legend Roster">
+      <img src="https://images.ctfassets.net/rporu91m20dc/1fg9ZcZJKw38PUtBBf1yE3/fb6a5fa1f79f4a6b9a4f4f464a6e6519/lifeline-apex.jpg" alt="Lifeline">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>💡 Pro Tips</h2>
+    <ul>
+      <li>Land aggressively to learn faster – “hot drops” build skill</li>
+      <li>Use zip lines and balloons to rotate quickly</li>
+      <li>Always share loot and communicate with pings</li>
+      <li>Use abilities wisely; don’t waste your ultimate!</li>
+      <li>Armor swap after every fight – it’s faster than healing</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🗺️ Map Insights</h2>
+    <p>Apex features rotating maps like Kings Canyon, World's Edge, and Olympus. Learn hot zones and crafting stations.</p>
+    <img src="https://cdn.mos.cms.futurecdn.net/Ph2cn3nEQUED5q3Hnep4CU-1200-80.jpg" alt="World's Edge Map" class="responsive">
+  </div>
+
+  <a href="gaming-guide.html" class="back-btn">← Back to Guide Gallery</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    const screen = document.getElementById("loadingScreen");
+    const content = document.getElementById("content");
+    setTimeout(() => {
+      screen.style.opacity = "0";
+      content.style.display = "block";
+      setTimeout(() => screen.style.display = "none", 1000);
+    }, 2500);
+  });
+</script>
+
+</body>
+</html>

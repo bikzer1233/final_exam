@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CS:GO Guide • Cuestas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      padding: 2rem clamp(1rem, 5vw, 4rem);
+    }
+    h1, h2 {
+      color: #2ecc71;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .section { margin-bottom: 3rem; }
+    img.responsive {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      display: block;
+    }
+    ul { padding-left: 1.5rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    a.back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #2ecc71;
+      color: #121212;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      background: #121212;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #2ecc71;
+      z-index: 9999;
+      flex-direction: column;
+      transition: opacity 1s ease;
+    }
+    .loading-bar-wrapper {
+      text-align: center;
+    }
+    .loading-title {
+      margin-bottom: 1rem;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+    }
+    .loading-bar-bg {
+      width: 80%;
+      max-width: 400px;
+      height: 20px;
+      background: #2a2a2a;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .loading-bar-fill {
+      height: 100%;
+      background: #2ecc71;
+      width: 0%;
+      animation: fillBar 2.5s forwards;
+    }
+    @keyframes fillBar {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-bar-wrapper">
+    <p class="loading-title">Loading: CS:GO Guide</p>
+    <div class="loading-bar-bg">
+      <div class="loading-bar-fill"></div>
+    </div>
+  </div>
+</div>
+
+<main id="content" style="display:none">
+  <h1>💣 Counter-Strike: Global Offensive – Complete Gamer’s Guide</h1>
+
+  <div class="section">
+    <h2>📘 Game Overview</h2>
+    <p>
+      CS:GO is a tactical first-person shooter where two teams—Terrorists and Counter-Terrorists—compete to either plant/defuse bombs or eliminate the opposing team. Developed by Valve and Hidden Path Entertainment, it’s one of the most competitive shooters in eSports history.
+    </p>
+    <img src="https://static1.squarespace.com/static/611d60fe1bdfad3944022ea3/611e491d9b95ed0c6314ae68/6138b35f024f207541f5a580/1636472246048/CSGO-Operation-10-Details.jpg?format=1500w" alt="CS:GO action" class="responsive">
+  </div>
+
+  <div class="section">
+    <h2>🎯 Weapon Essentials</h2>
+    <ul>
+      <li><strong>AK-47</strong> – One-shot headshot, used by Terrorists.</li>
+      <li><strong>M4A1-S / M4A4</strong> – Counter-Terrorist rifles with different spray patterns.</li>
+      <li><strong>AWP</strong> – High-damage sniper rifle, lethal in skilled hands.</li>
+      <li><strong>Desert Eagle (Deagle)</strong> – Powerful pistol with high risk-reward gameplay.</li>
+    </ul>
+    <div class="grid">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAG3hCurJQNc3QKSmbv57Ftw47R_ZPFOua1w&s" alt="AK-47">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHchEKoCmvvK-pXy0JkajWwXA3_Ph0eE2Ir0W-fEdXblmc412fnbaqM6o-YiDPbAh7jKM&usqp=CAU" alt="M4A1-S">
+      <img src="https://assetsio.gnwcdn.com/csgoawpguide.jpeg?width=1200&height=630&fit=crop&enable=upscale&auto=webp" alt="AWP">
+      <img src="https://smash-cs.ru/uploads/posts/2023-04/deaglescreen1.png" alt="Desert Eagle">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📍 Map Knowledge</h2>
+    <p>Knowing your maps is critical. Here are the most played maps and their basic strategies:</p>
+    <ul>
+      <li><strong>Mirage</strong> – Great for mid-control and aggressive A-site plays.</li>
+      <li><strong>Inferno</strong> – Banana control is key. Use utility to win early duels.</li>
+      <li><strong>Dust II</strong> – Iconic map. A long, mid, and B tunnel are constant pressure points.</li>
+    </ul>
+    <div class="grid">
+      <img src="https://skincashier.com/blog/wp-content/uploads/sites/9/2022/09/csgo-de-mirage-radar-view.jpg" alt="Dust II">
+      <img src="https://cslabez.com/wp-content/uploads/2023/08/Dust-2-callouts-1.jpg" alt="Mirage">
+      <img src="https://cslabez.com/wp-content/uploads/2023/04/csgo-Inferno-map-callouts-and-positions.jpg" alt="Inferno">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🎓 Pro Tips for Beginners</h2>
+    <ul>
+      <li>Adjust your sensitivity: most pros use low DPI + low in-game sensitivity.</li>
+      <li>Train spray control with AK and M4 in aim maps.</li>
+      <li>Learn pop flash and smoke spots to help your team take control.</li>
+      <li>Stay calm during clutch situations. Sound and timing win rounds.</li>
+      <li>Watch pro demos to learn common strategies and rotations.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📺 Bonus: Recommended Settings</h2>
+    <ul>
+      <li><strong>Resolution:</strong> 1280x960 (Stretched)</li>
+      <li><strong>Crosshair:</strong> Static style, color cyan or green</li>
+      <li><strong>Radar:</strong> Rotate and zoom enabled</li>
+      <li><strong>Sound:</strong> Use stereo headphones, enable HRTF</li>
+    </ul>
+  </div>
+
+  <a href="gaming-guide.html" class="back-btn">← Back to Guide Gallery</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    const screen = document.getElementById("loadingScreen");
+    const content = document.getElementById("content");
+    setTimeout(() => {
+      screen.style.opacity = "0";
+      content.style.display = "block";
+      setTimeout(() => screen.style.display = "none", 1000);
+    }, 2500);
+  });
+</script>
+
+</body>
+</html>

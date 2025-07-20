@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minecraft Guide • Cuestas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      padding: 2rem clamp(1rem, 5vw, 4rem);
+    }
+    h1, h2 {
+      color: #2ecc71;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .section { margin-bottom: 3rem; }
+    img.responsive {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      display: block;
+    }
+    ul { padding-left: 1.5rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    a.back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #2ecc71;
+      color: #121212;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      background: #121212;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #2ecc71;
+      z-index: 9999;
+      flex-direction: column;
+      transition: opacity 1s ease;
+    }
+    .loading-bar-wrapper {
+      text-align: center;
+    }
+    .loading-title {
+      margin-bottom: 1rem;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+    }
+    .loading-bar-bg {
+      width: 80%;
+      max-width: 400px;
+      height: 20px;
+      background: #2a2a2a;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .loading-bar-fill {
+      height: 100%;
+      background: #2ecc71;
+      width: 0%;
+      animation: fillBar 2.5s forwards;
+    }
+    @keyframes fillBar {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-bar-wrapper">
+    <p class="loading-title">Loading: Minecraft Guide</p>
+    <div class="loading-bar-bg">
+      <div class="loading-bar-fill"></div>
+    </div>
+  </div>
+</div>
+
+<main id="content" style="display:none;">
+  <h1>🟩 Minecraft – Survival, Creativity & Adventure</h1>
+
+  <div class="section">
+    <h2>📜 Overview</h2>
+    <p>Minecraft is a sandbox survival and building game where you explore, mine, craft, and survive. Whether in Creative or Survival mode, it offers nearly endless opportunities for creativity and adventure.</p>
+    <img src="https://cdn.mos.cms.futurecdn.net/NcDDJ6ZcWY4KwPbHcNPA2d-1200-80.jpg" alt="Minecraft World" class="responsive">
+  </div>
+
+  <div class="section">
+    <h2>🧱 Basic Survival Tips</h2>
+    <ul>
+      <li>Start by punching trees to get wood</li>
+      <li>Create a crafting table and basic wooden tools</li>
+      <li>Build a shelter before nightfall (mobs spawn at night)</li>
+      <li>Craft a furnace to cook food and smelt ores</li>
+      <li>Dig down safely using staircases or ladders</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>💡 Advanced Tips</h2>
+    <ul>
+      <li>Use shields for early protection against skeletons</li>
+      <li>Breed animals like cows and chickens for food</li>
+      <li>Always carry a water bucket in caves (for lava and falls)</li>
+      <li>Use enchantments on weapons and armor via enchantment tables</li>
+      <li>Explore strongholds and defeat the Ender Dragon</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🎮 Popular Game Modes</h2>
+    <ul>
+      <li><strong>Survival Mode</strong> – Gather, craft, and survive</li>
+      <li><strong>Creative Mode</strong> – Unlimited blocks for building</li>
+      <li><strong>Adventure Mode</strong> – Map-based RPG gameplay</li>
+      <li><strong>Hardcore Mode</strong> – One life only</li>
+    </ul>
+    <div class="grid">
+      <img src="https://images.unsplash.com/photo-1596079890749-dcfed13d682f" alt="Survival Mode">
+      <img src="https://images.unsplash.com/photo-1618659277639-b8cfb5e2cb71" alt="Creative Builds">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📌 Biomes to Explore</h2>
+    <ul>
+      <li>Plains – Easy to build and farm</li>
+      <li>Desert – Find temples and villages</li>
+      <li>Swamp – Slimes and witch huts</li>
+      <li>Nether – Dangerous, but full of loot</li>
+    </ul>
+  </div>
+
+  <a href="gaming-guide.html" class="back-btn">← Back to Guide Gallery</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    const screen = document.getElementById("loadingScreen");
+    const content = document.getElementById("content");
+    setTimeout(() => {
+      screen.style.opacity = "0";
+      content.style.display = "block";
+      setTimeout(() => screen.style.display = "none", 1000);
+    }, 2500);
+  });
+</script>
+
+</body>
+</html>

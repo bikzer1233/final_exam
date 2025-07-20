@@ -1,0 +1,30 @@
+Project Title: Filibrena 1521X: The War of Gun Mages
+
+Game Type:
+First-Person Shooter (FPS) with fantasy-magic elements and historical lore.
+
+Description:
+Filibrena 1521X is a historical fantasy FPS game inspired by Philippine history and mythology. Set in an alternate timeline where the Battle of Mactan triggered a war between gun-wielding mages, players take on the role of a rebel leader fighting against invading forces empowered by foreign arcane technology.
+
+The game merges traditional FPS mechanics with magical abilities, offering dynamic gunplay, strategic mana management, and narrative-driven missions across stylized, pre-colonial-inspired environments.
+
+Core Features:
+- Gun-Magic Combat System: Equip guns powered by mana cores, with skills like teleportation, area blasts, or elemental bullets.
+- Story Campaign: A single-player narrative following a rebel uprising against magical colonizers.
+- Lore-Rich World: Dive into characters and regions inspired by Filipino epics, deities, and ancient warriors.
+- Mana System: Skill usage tied to a regenerating mana bar; overuse can lead to overheating or mana burnout.
+- Enemy AI: Enemies adapt tactics depending on player’s magic type, with unique bosses tied to mythological figures.
+- Visual Style: Stylized semi-realistic environments with Filipino cultural aesthetics.
+
+Technology Stack:
+- Unity Engine (C#)
+- Custom FPS Controller with magic skill tree
+- Narrative System using Timeline and ScriptableObjects
+- Post-Processing Stack for magical effects
+- Filipino-inspired asset kit (custom + imported)
+
+Development Notes:
+- Designed for PC and potentially PS5 port.
+- Built with expandability for multiplayer magic-duel mode.
+- Strong focus on decolonial storytelling through gameplay and aesthetics.
+

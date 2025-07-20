@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dota 2 Guide • Cuestas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      padding: 2rem clamp(1rem, 5vw, 4rem);
+    }
+
+    h1, h2 {
+      color: #2ecc71;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    img.responsive {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      display: block;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    a.back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #2ecc71;
+      color: #121212;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* Loader */
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      background: #121212;
+      color: #2ecc71;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      font-family: 'Orbitron', sans-serif;
+      transition: opacity 0.8s ease;
+    }
+
+    .loading-bar-wrapper {
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .loading-title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .loading-bar-bg {
+      width: 100%;
+      height: 10px;
+      background: #333;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .loading-bar-fill {
+      width: 0%;
+      height: 100%;
+      background: #2ecc71;
+      transition: width 2.5s ease-out;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-bar-wrapper">
+    <p class="loading-title">Loading: Dota 2 Guide</p>
+    <div class="loading-bar-bg">
+      <div class="loading-bar-fill" id="loadingFill"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<main id="content" style="display:none;">
+  <h1>⚔️ Dota 2 – Beginner’s MOBA Guide</h1>
+
+  <div class="section">
+    <h2>📘 Overview</h2>
+    <p>
+      Dota 2 is a competitive 5v5 online battle arena developed by Valve. It is known for its complexity, deep strategy, and large hero pool.
+      Players must work together to destroy the enemy team’s Ancient while protecting their own.
+    </p>
+    <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota2_social.jpg" alt="Dota 2 Promo" class="responsive">
+  </div>
+
+  <div class="section">
+    <h2>👥 Roles & Lanes</h2>
+    <ul>
+      <li><strong>Safe Lane Carry</strong> – Farms gold and carries late-game (e.g., Juggernaut, Phantom Assassin)</li>
+      <li><strong>Midlane</strong> – High-damage casters or gankers (e.g., Storm Spirit, Tinker)</li>
+      <li><strong>Offlane</strong> – Tanky or disruptive heroes (e.g., Tidehunter, Underlord)</li>
+      <li><strong>Hard Support</strong> – Wards and protects team (e.g., Crystal Maiden, Lion)</li>
+      <li><strong>Soft Support</strong> – Roams, sets up kills (e.g., Earth Spirit, Mirana)</li>
+    </ul>
+    <div class="grid">
+      <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/juggernaut_vert.jpg" alt="Juggernaut">
+      <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/tidehunter_vert.jpg" alt="Tidehunter">
+      <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/lion_vert.jpg" alt="Lion">
+      <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/storm_spirit_vert.jpg" alt="Storm Spirit">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📍 Map Knowledge</h2>
+    <p>
+      The Dota 2 map is split diagonally by the river. Each side has 3 lanes: Safe lane, Mid lane, and Offlane. The jungle contains neutral camps for farming and objectives like Roshan.
+    </p>
+    <img src="https://admin.esports.gg/wp-content/uploads/2025/02/Dota-2-Patch-7.38-new-map.jpg" alt="Dota 2 Map" class="responsive">
+  </div>
+
+  <div class="section">
+    <h2>💡 Beginner Tips</h2>
+    <ul>
+      <li>Always buy wards and place them for vision.</li>
+      <li>Learn the basics of last-hitting and denying creeps.</li>
+      <li>Stick with your team in mid and late game.</li>
+      <li>Check the minimap constantly for ganks or fights.</li>
+      <li>Practice one role until you're confident with it.</li>
+    </ul>
+  </div>
+
+  <a href="gaming-guide.html" class="back-btn">← Back to Guide Gallery</a>
+</main>
+
+<!-- JavaScript -->
+<script>
+  window.addEventListener("load", () => {
+    const loadingScreen = document.getElementById("loadingScreen");
+    const loadingBar = document.getElementById("loadingFill");
+    const content = document.getElementById("content");
+
+    // Animate bar
+    loadingBar.style.width = "100%";
+
+    // After bar fills, show content
+    setTimeout(() => {
+      loadingScreen.style.opacity = "0";
+      content.style.display = "block";
+      setTimeout(() => {
+        loadingScreen.style.display = "none";
+      }, 800);
+    }, 2500);
+  });
+</script>
+
+</body>
+</html>

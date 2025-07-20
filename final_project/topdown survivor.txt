@@ -1,0 +1,29 @@
+Project Title: TopDown Survivor
+
+Game Type:
+Top-down 2D zombie survival game built in Unity.
+
+Description:
+TopDown Survivor is a fast-paced survival shooter where the player must survive against endless waves of zombies. The game features twin-stick shooter controls, a randomized weapon drop system, and power-ups that help players extend their survival time. The player must navigate an enclosed map, avoid getting swarmed, and use strategic movement and shooting to stay alive.
+
+Core Features:
+- Survival Mode: Endless waves of zombies that increase in number and difficulty.
+- Weapon System: Switchable weapons like pistol, shotgun, rifle. Ammo is limited and must be managed.
+- Power-Ups: Random temporary buffs like movement speed, damage boost, or health regeneration.
+- Knockback System: Enemies or explosions push the player back, affecting positioning.
+- XP & Leveling: Players earn experience to unlock passive skills like faster reload or higher damage.
+- Wave Spawner: Zombies spawn in groups based on difficulty level and wave count.
+- Environmental Hazards: Exploding barrels and barricades can be used for tactical advantage.
+
+Technology Stack:
+- Unity (C#)
+- Unity NavMesh for enemy pathfinding
+- Unity Particle System for effects (blood splatter, muzzle flash)
+- Object Pooling for efficient spawning
+- Aseprite for pixel art sprites
+
+Development Notes:
+- Modular script architecture: EnemyAI, WaveManager, WeaponController, HealthSystem, GameManager.
+- Optimized for mobile and desktop.
+- Ready for future expansion with multiplayer support or additional maps and weapons.
+

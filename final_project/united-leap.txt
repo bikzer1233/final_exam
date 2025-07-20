@@ -1,0 +1,29 @@
+Project Title: United Leap
+
+Game Type:
+2D Cooperative Puzzle-Platformer
+
+Description:
+United Leap is a local multiplayer 2D puzzle-platformer where two players must cooperate to overcome environmental challenges by jumping, activating platforms, and syncing movements. The game focuses on teamwork and timing, making it ideal for friends, families, or school groups.
+
+Each level introduces new cooperative mechanics like switch triggers, weight plates, and wall-jumps that require communication between players to proceed. Players must reach the exit together while avoiding hazards and solving logic-based platform puzzles.
+
+Core Features:
+- Local Co-Op: 2 players play simultaneously using one keyboard or two controllers.
+- Synchronization Puzzles: Players must perform actions at the same time to progress.
+- Unique Abilities: Each character has different skills — one can double jump, the other can push heavy objects.
+- Level Progression: Increasing complexity with new elements like lasers, trampolines, teleporters, and gates.
+- Friendly Design: No combat; fully focused on collaboration and timing.
+
+Technology Stack:
+- Unity Engine (C#)
+- Custom physics-based 2D movement
+- Level design using Unity’s Tilemap system
+- Input system supporting dual-controller or shared keyboard
+- Simple UI with timer and retry system
+
+Development Notes:
+- Can be expanded with a level editor or online multiplayer.
+- Perfect for educational settings promoting teamwork and problem-solving.
+- Playtested with teens and young adults for balance and accessibility.
+

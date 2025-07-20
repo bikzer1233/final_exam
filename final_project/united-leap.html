@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>United Leap - Project Detail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: 'Roboto', sans-serif; margin: 0; background: #121212; color: white; }
+    .loader-screen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #121212;
+      color: #2ecc71;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      z-index: 1000;
+    }
+    .project-detail {
+      display: none;
+      padding: 2rem clamp(1rem, 5vw, 6rem);
+    }
+    h1 { font-family: 'Orbitron', sans-serif; font-size: clamp(1.5rem, 4vw, 3rem); color: #2ecc71; }
+    .images { display: flex; gap: min(1rem, 5vw); flex-wrap: wrap; margin-bottom: 2rem; }
+    .images img { max-width: 100%; border-radius: 8px; }
+    .desc { max-width: 800px; line-height: 1.6; margin-bottom: 1.5rem; }
+    .features ul { list-style: square; padding-left: 1.5rem; }
+    .back-btn { margin-top: 2rem; display: inline-block; background: #2ecc71; color: black; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <div class="loading-screen" id="loader">
+  <div class="loading-bar-wrapper">
+    <p>Loading Project...</p>
+    <div class="loading-bar">
+      <div class="loading-progress" id="projectProgress"></div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="project-detail" id="projectContent">
+    <h1>United Leap</h1>
+    <div class="images">
+      <img src="https://via.placeholder.com/600x300?text=Screenshot+1" alt="Preview 1">
+      <img src="https://via.placeholder.com/600x300?text=Screenshot+2" alt="Preview 2">
+    </div>
+    <div class="desc">
+      <p><strong>United Leap</strong> is a cooperative 2D platformer where players solve puzzles by helping each other jump, push, and build paths to reach their goal. It focuses on teamwork mechanics and momentum physics.</p>
+    </div>
+    <div class="features">
+      <h3>Features</h3>
+      <ul>
+        <li>2-player local multiplayer</li>
+        <li>Custom momentum physics</li>
+        <li>Switch & puzzle integration</li>
+        <li>Hand-crafted levels and assets</li>
+      </ul>
+    </div>
+   <a class="back-btn" href="index.html#projects">← Back to Projects</a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const loader = document.getElementById("loader");
+      const content = document.getElementById("projectContent");
+
+      // Simulate loading delay
+      setTimeout(() => {
+        loader.style.display = "none";
+        content.style.display = "block";
+      }, 1500); // 1.5s
+    });
+  </script>
+</body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.getElementById("loader");
+    const bar = document.getElementById("projectProgress");
+    const content = document.getElementById("projectContent");
+
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += Math.floor(Math.random() * 10 + 5);
+      bar.style.width = `${Math.min(progress, 100)}%`;
+
+      if (progress >= 100) {
+        clearInterval(interval);
+        loader.classList.add("fade-out");
+        setTimeout(() => {
+          loader.style.display = "none";
+          content.style.display = "block";
+        }, 1000);
+      }
+    }, 300);
+  });
+</script>

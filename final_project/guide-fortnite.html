@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fortnite Guide • Cuestas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      padding: 2rem clamp(1rem, 5vw, 4rem);
+    }
+    h1, h2 {
+      color: #2ecc71;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .section { margin-bottom: 3rem; }
+    img.responsive {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      display: block;
+    }
+    ul { padding-left: 1.5rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    a.back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #2ecc71;
+      color: #121212;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      background: #121212;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #2ecc71;
+      z-index: 9999;
+      flex-direction: column;
+      transition: opacity 1s ease;
+    }
+    .loading-bar-wrapper {
+      text-align: center;
+    }
+    .loading-title {
+      margin-bottom: 1rem;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+    }
+    .loading-bar-bg {
+      width: 80%;
+      max-width: 400px;
+      height: 20px;
+      background: #2a2a2a;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .loading-bar-fill {
+      height: 100%;
+      background: #2ecc71;
+      width: 0%;
+      animation: fillBar 2.5s forwards;
+    }
+    @keyframes fillBar {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-bar-wrapper">
+    <p class="loading-title">Loading: Fortnite Guide</p>
+    <div class="loading-bar-bg">
+      <div class="loading-bar-fill"></div>
+    </div>
+  </div>
+</div>
+
+<main id="content" style="display:none;">
+  <h1>🏗️ Fortnite – Build, Fight, Survive</h1>
+
+  <div class="section">
+    <h2>🔎 Overview</h2>
+    <p>Fortnite by Epic Games is a battle royale game that combines gunplay, building mechanics, and pop culture crossovers. 100 players drop in, only 1 (or 1 team) wins.</p>
+    <img src="https://staticg.sportskeeda.com/editor/2022/08/aa126-16598670088938-1920.jpg" alt="Fortnite Lobby" class="responsive">
+  </div>
+
+  <div class="section">
+    <h2>🧱 Game Modes</h2>
+    <ul>
+      <li><strong>Battle Royale:</strong> Last one standing wins</li>
+      <li><strong>Zero Build:</strong> No construction—pure gunfights</li>
+      <li><strong>Creative Mode:</strong> Design your own map/game</li>
+      <li><strong>Save the World:</strong> PvE tower-defense hybrid</li>
+    </ul>
+    <div class="grid">
+      <img src="https://cdn2.unrealengine.com/Fortnite%2Ffortnite-zero-build-overview%2FBR_ZB_Overview_Social-1920x1080-afa5f14e2569.jpg" alt="Zero Build">
+      <img src="https://cdn2.unrealengine.com/Fortnite%2Fcreative-mode%2Fcreative-mode-1920x1080-2ce9a11477d3.jpg" alt="Creative Mode">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📜 Building Tips</h2>
+    <ul>
+      <li>Practice 90s and ramp rushes in Creative</li>
+      <li>Use pyramids to edit trap builds fast</li>
+      <li>Pre-fire edits to surprise opponents</li>
+      <li>Collect mats (wood, brick, metal) early</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📦 Loot Tier List</h2>
+    <p>Weapon colors indicate rarity and strength:</p>
+    <ul>
+      <li><span style="color: grey;">Gray – Common</span></li>
+      <li><span style="color: green;">Green – Uncommon</span></li>
+      <li><span style="color: blue;">Blue – Rare</span></li>
+      <li><span style="color: purple;">Purple – Epic</span></li>
+      <li><span style="color: orange;">Orange – Legendary</span></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🗺️ Popular Landing Spots</h2>
+    <p>Each season brings new POIs (Points of Interest). Learn where to drop for the best loot or low action.</p>
+    <img src="https://cdn1.dotesports.com/wp-content/uploads/2024/03/29223916/Fortnite-Chapter-5-map-Season-2.jpg" alt="Fortnite Map" class="responsive">
+  </div>
+
+  <a href="gaming-guide.html" class="back-btn">← Back to Guide Gallery</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    const screen = document.getElementById("loadingScreen");
+    const content = document.getElementById("content");
+    setTimeout(() => {
+      screen.style.opacity = "0";
+      content.style.display = "block";
+      setTimeout(() => screen.style.display = "none", 1000);
+    }, 2500);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaming Guide - Cuestas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: #2ecc71;
+      margin-bottom: 2rem;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .game-card {
+      background: #1f1f1f;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
+
+    .game-card:hover {
+      transform: scale(1.03);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .game-card h3 {
+      font-size: 1.1rem;
+      color: #2ecc71;
+      padding: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .back-to-portfolio-btn {
+      background: #2ecc71;
+      color: #121212;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .back-to-portfolio-btn:hover {
+      background: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>🎮 Gaming Guide</h1>
+    <div class="game-grid">
+      <a href="guide-valorant.html">
+        <div class="game-card">
+          <img src="https://playzine.net/wp-content/uploads/2022/11/valorant.jpg?w=648" alt="Valorant">
+          <h3>Valorant</h3>
+        </div>
+      </a>
+
+      <a href="guide-league.html">
+        <div class="game-card">
+          <img src="https://i0.wp.com/highschool.latimes.com/wp-content/uploads/2021/09/league-of-legends.jpeg?fit=1607%2C895&ssl=1" alt="League of Legends">
+          <h3>League of Legends</h3>
+        </div>
+      </a>
+
+      <a href="guide-mobile-legends.html">
+        <div class="game-card">
+          <img src="https://kaleoz-media.seagmcdn.com/kaleoz-store/202407/oss-a2d7eb0b228031097472357bb332d7da.jpg" alt="Mobile Legends">
+          <h3>Mobile Legends</h3>
+        </div>
+      </a>
+
+      <a href="guide-csgo.html">
+        <div class="game-card">
+          <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/730/capsule_616x353.jpg?t=1749053861" alt="CS:GO">
+          <h3>CS:GO</h3>
+        </div>
+      </a>
+
+      <a href="guide-dota2.html">
+        <div class="game-card">
+          <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/570/capsule_616x353.jpg?t=1748018387" alt="Dota 2">
+          <h3>Dota 2</h3>
+        </div>
+      </a>
+
+      <a href="guide-apex.html">
+        <div class="game-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf2o0g5-fq2cruiX5OC8r1rDA9ibe1LzyYhJQU0z2HPTK06m6s79hd1HklUjns22f6viM&usqp=CAU" alt="Apex Legends">
+          <h3>Apex Legends</h3>
+        </div>
+      </a>
+
+      <a href="guide-pubg.html">
+        <div class="game-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcAxpKg-CeEt6JEkaxfCJ-wLvbW0Sq5kswPqIb3K3Uc3rKcCi2Xg3CzM6cobxcf7JEkIk&usqp=CAU" alt="PUBG">
+          <h3>PUBG</h3>
+        </div>
+      </a>
+
+      <a href="guide-codm.html">
+        <div class="game-card">
+          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTg7VREyBJhiS8LocYCPXa3ScLgHI-twenDIV5g4MNbvUA6sk5_K-D7NVSfCDP6CQJTNupLvBuCZJSrq5jllpiE9E1H4krchJe7lc50HQ" alt="COD Mobile">
+          <h3>COD: Mobile</h3>
+        </div>
+      </a>
+
+      <a href="guide-genshin.html">
+        <div class="game-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlL6vbSBlrr1Ax6RHEF5VtpKEniZu6j4IMuQ&s" alt="Genshin Impact">
+          <h3>Genshin Impact</h3>
+        </div>
+      </a>
+
+      <a href="guide-fortnite.html">
+        <div class="game-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0XOYRtHRmY0IwBZUbNBauz6LWVlGtKqcsgV289yOf1UqkEYbFscpsrJXLXdjQK_YN98Q&usqp=CAU" alt="Fortnite">
+          <h3>Fortnite</h3>
+        </div>
+      </a>
+
+      <a href="guide-minecraft.html">
+        <div class="game-card">
+          <img src="https://xboxwire.thesourcemediaassets.com/sites/2/2024/05/Hero-8c18da7c19a1a8811ddb.jpg" alt="Minecraft">
+          <h3>Minecraft</h3>
+        </div>
+      </a>
+
+      <a href="guide-palworld.html">
+        <div class="game-card">
+          <img src="https://i.ytimg.com/vi/IltMIJeK-1M/maxresdefault.jpg" alt="Palworld">
+          <h3>Palworld</h3>
+        </div>
+      </a>
+    </div>
+
+    <!-- Back to Portfolio Button -->
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="index.html" class="back-to-portfolio-btn">← Back to Portfolio</a>
+    </div>
+  </main>
+</body>
+</html>

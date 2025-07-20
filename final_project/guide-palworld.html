@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Palworld Guide • Cuestas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      padding: 2rem clamp(1rem, 5vw, 4rem);
+    }
+    h1, h2 {
+      color: #2ecc71;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .section { margin-bottom: 3rem; }
+    img.responsive {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      display: block;
+    }
+    ul { padding-left: 1.5rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    a.back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #2ecc71;
+      color: #121212;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    /* loading bar */
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      background: #121212;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #2ecc71;
+      z-index: 9999;
+      flex-direction: column;
+      transition: opacity 1s ease;
+    }
+    .loading-bar-bg {
+      width: 80%;
+      max-width: 400px;
+      height: 20px;
+      background: #2a2a2a;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .loading-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: #2ecc71;
+      animation: fillBar 2.5s forwards;
+    }
+    @keyframes fillBar {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-bar-bg">
+    <div class="loading-bar-fill"></div>
+  </div>
+  <p class="loading-title">Loading: Palworld Guide</p>
+</div>
+
+<main id="content" style="display:none;">
+  <h1>🐾 Palworld – Survival + Creature‑Tamer Hybrid Guide</h1>
+
+  <div class="section">
+    <h2>🌍 Game Overview</h2>
+    <p><strong>Palworld</strong> is a survival adventure by Pocketpair where you explore the Palpagos Islands, catch creatures called “Pals”, build bases, craft tools, and fight — all while managing hunger, sanity, and resources :contentReference[oaicite:1]{index=1}.</p>
+    <img src="https://wallpaperaccess.com/full/263820.jpg" alt="Palworld Gameplay" class="responsive">
+  </div>
+
+  <div class="section">
+    <h2>🛠 Core Gameplay Tips</h2>
+    <ul>
+      <li>Build early base structures like Ranches, Berry Farms, and Palboxes to automate resource generation :contentReference[oaicite:2]{index=2}.</li>
+      <li>Capture Pals instead of killing them to gain more experience and unlock missions faster :contentReference[oaicite:3]{index=3}.</li>
+      <li>Upgrade health, weight, and stamina stats early for better carry capacity and mobility :contentReference[oaicite:4]{index=4}.</li>
+      <li>Activate fast travel towers across the map to ensure safe respawns and efficient travel :contentReference[oaicite:5]{index=5}.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>👥 Pal Management & Base Strategy</h2>
+    <ul>
+      <li>Assign task‑suited Pals (e.g. mining, planting, water) to appropriate stations to maximize productivity :contentReference[oaicite:6]{index=6}.</li>
+      <li>Keep Pals fed and their sanity high—unhappy Pals refuse tasks and slow output :contentReference[oaicite:7]{index=7}.</li>
+      <li>Avoid overusing rare technology points; prioritize tools and mounts that enhance exploration and base building :contentReference[oaicite:8]{index=8}.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>⚔️ Combat & Raid Tips</h2>
+    <ul>
+      <li>Use Pals equipped with weapons like Flamethrowers or rifles; treat them as active abilities in combat :contentReference[oaicite:9]{index=9}.</li>
+      <li>During raids, summon stronger combat Pals rather than worker Pals to defend your base :contentReference[oaicite:10]{index=10}.</li>
+      <li>The Seed Mine skill is highly effective for boss fights; breed Pals that can learn it early :contentReference[oaicite:11]{index=11}.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🎯 Recommended Starter Pals</h2>
+    <ul>
+      <li><strong>Tanzee</strong> – Multi-tasker: plants, mines, transports, and waters :contentReference[oaicite:12]{index=12}.</li>
+      <li><strong>Cattiva or Rushoar</strong> – Good early miners and gatherers :contentReference[oaicite:13]{index=13}.</li>
+      <li><strong>Foxsparks</strong> – Fire-type attacker and helpful for crafting :contentReference[oaicite:14]{index=14}.</li>
+      <li><strong>Vixy</strong> – Excellent for farming Pal Spheres at Ranches :contentReference[oaicite:15]{index=15}.</li>
+    </ul>
+  </div>
+
+  <a href="gaming-guide.html" class="back-btn">← Back to Guide Gallery</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    const screen = document.getElementById("loadingScreen");
+    const content = document.getElementById("content");
+    setTimeout(() => {
+      screen.style.opacity = "0";
+      content.style.display = "block";
+      setTimeout(() => screen.style.display = "none", 1000);
+    }, 2500);
+  });
+</script>
+
+</body>
+</html>

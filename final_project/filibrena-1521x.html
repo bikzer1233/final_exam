@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filibrena 1521X • Cuestas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 2rem clamp(1rem, 5vw, 4rem);
+    }
+
+    h1, h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #2ecc71;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    img.responsive {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      display: block;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    a.back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #2ecc71;
+      color: #121212;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* Loading Screen */
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      background: #121212;
+      color: #2ecc71;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .loading-bar-wrapper {
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .loading-title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .loading-bar-bg {
+      width: 100%;
+      height: 10px;
+      background: #333;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .loading-bar-fill {
+      width: 0%;
+      height: 100%;
+      background: #2ecc71;
+      animation: fillBar 2.5s ease-out forwards;
+    }
+
+    @keyframes fillBar {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-bar-wrapper">
+    <p class="loading-title">Loading: Filibrena 1521X</p>
+    <div class="loading-bar-bg">
+      <div class="loading-bar-fill"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Content -->
+<main id="content" style="display:none;">
+  <h1>🔫 Filibrena 1521X – Gun-Mage War in Philippine Fantasy</h1>
+
+  <div class="section">
+    <h2>📜 Overview</h2>
+    <p>
+      *Filibrena 1521X* is a fantasy shooter-RPG inspired by Philippine myth and colonial history. You play as a "Gun Mage" resisting dark forces during an alternate version of the 1521 conquest, where magic and futuristic technology collide.
+    </p>
+    <img src="https://i.ytimg.com/vi/6MydVo3ZmmM/maxresdefault.jpg" alt="Filibrena 1521X Preview" class="responsive">
+  </div>
+
+  <div class="section">
+    <h2>⚙️ Game Mechanics</h2>
+    <ul>
+      <li>🔫 One-shot kill gunplay with limited ammo based on "Love Power"</li>
+      <li>✨ NPCs drain or refill love power depending on interactions</li>
+      <li>🔄 Defeating enemies regenerates your power — killing innocents weakens you</li>
+      <li>🚷 Stealth required in historical towns to avoid unwanted attention</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🧙 Characters</h2>
+    <ul>
+      <li><strong>Laon</strong> – A rebel mage who believes in the return of Bathala</li>
+      <li><strong>Cruz</strong> – A Spanish gun priest who uses divine bullets</li>
+      <li><strong>Binhi</strong> – A half-diwata scout who can cloak and teleport</li>
+    </ul>
+    <div class="grid">
+      <img src="https://i.pinimg.com/736x/8d/31/91/8d31912ffb9e9dc23c9675dcff881196.jpg" alt="Gun Mage Concept">
+      <img src="https://cdnb.artstation.com/p/assets/images/images/036/711/170/large/simon-bizet-paladin-final.jpg" alt="Priest Knight">
+      <img src="https://i.pinimg.com/736x/16/f9/9b/16f99b31bbefedf4b71eaa9e4dd804f4.jpg" alt="Diwata Scout">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>💡 Developer Tips</h2>
+    <ul>
+      <li>🕹️ Balance gun cooldown with magic buffs to keep players active</li>
+      <li>🎨 Use Filipino lore like diwata, kapre, and manananggal for bosses</li>
+      <li>🎭 Consider moral choices for power-ups (save vs. kill NPCs)</li>
+      <li>🎶 Use traditional instruments (kulintang, agong) for soundtrack</li>
+    </ul>
+  </div>
+
+  <a href="index.html" class="back-btn">← Back to Portfolio</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    const loadingScreen = document.getElementById("loadingScreen");
+    const content = document.getElementById("content");
+
+    setTimeout(() => {
+      loadingScreen.style.opacity = 0;
+      content.style.display = "block";
+      setTimeout(() => {
+        loadingScreen.style.display = "none";
+      }, 1000);
+    }, 2500);
+  });
+</script>
+</body>
+</html>

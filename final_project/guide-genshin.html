@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Genshin Impact Guide • Cuestas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      padding: 2rem clamp(1rem, 5vw, 4rem);
+    }
+    h1, h2 {
+      color: #2ecc71;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .section { margin-bottom: 3rem; }
+    img.responsive {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      margin: 1rem 0;
+      display: block;
+    }
+    ul { padding-left: 1.5rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .grid img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    a.back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: #2ecc71;
+      color: #121212;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .loading-screen {
+      position: fixed;
+      inset: 0;
+      background: #121212;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      color: #2ecc71;
+      z-index: 9999;
+      flex-direction: column;
+      transition: opacity 1s ease;
+    }
+    .loading-bar-wrapper {
+      text-align: center;
+    }
+    .loading-title {
+      margin-bottom: 1rem;
+      font-size: clamp(1.2rem, 3vw, 2rem);
+    }
+    .loading-bar-bg {
+      width: 80%;
+      max-width: 400px;
+      height: 20px;
+      background: #2a2a2a;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .loading-bar-fill {
+      height: 100%;
+      background: #2ecc71;
+      width: 0%;
+      animation: fillBar 2.5s forwards;
+    }
+    @keyframes fillBar {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-bar-wrapper">
+    <p class="loading-title">Loading: Genshin Impact Guide</p>
+    <div class="loading-bar-bg">
+      <div class="loading-bar-fill"></div>
+    </div>
+  </div>
+</div>
+
+<main id="content" style="display:none">
+  <h1>🌌 Genshin Impact – Beginner’s Adventure Guide</h1>
+
+  <div class="section">
+    <h2>🌍 Overview</h2>
+    <p>Genshin Impact is an open-world action RPG by HoYoverse, featuring elemental combat, exploration, and gacha-based character acquisition. Travel across Teyvat, solve puzzles, defeat bosses, and build the ultimate team.</p>
+    <img src="https://images.hdqwalls.com/wallpapers/genshin-impact-characters-8k-ro.jpg" alt="Genshin Impact Characters" class="responsive">
+  </div>
+
+  <div class="section">
+    <h2>🌀 Elemental Reactions</h2>
+    <ul>
+      <li><strong>Vaporize</strong> (Hydro + Pyro): Massive single-target damage</li>
+      <li><strong>Overloaded</strong> (Pyro + Electro): AoE blast damage</li>
+      <li><strong>Frozen</strong> (Cryo + Hydro): Freezes enemies in place</li>
+      <li><strong>Superconduct</strong> (Electro + Cryo): Defense reduction</li>
+    </ul>
+    <div class="grid">
+      <img src="https://cdn.mos.cms.futurecdn.net/6phH5VFEhLoRg8XwnR5vqG.jpg" alt="Elemental Combat">
+      <img src="https://cdn.oneesports.gg/cdn-data/2023/01/GenshinImpact_ElementalReaction_Chart-1024x576.jpg" alt="Elemental Chart">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🧝 Top Characters to Start</h2>
+    <ul>
+      <li><strong>Noelle</strong> – Defense-based healer/tank (great for beginners)</li>
+      <li><strong>Kaeya</strong> – Cryo sword user, good early game DPS</li>
+      <li><strong>Amber</strong> – Pyro archer used for puzzles and early Pyro access</li>
+      <li><strong>Barbara</strong> – Hydro healer, easy to get after Adventure Rank 20</li>
+    </ul>
+    <div class="grid">
+      <img src="https://static.wikia.nocookie.net/gensin-impact/images/6/6d/Character_Noelle_Card.png" alt="Noelle">
+      <img src="https://static.wikia.nocookie.net/gensin-impact/images/0/0e/Character_Kaeya_Card.png" alt="Kaeya">
+      <img src="https://static.wikia.nocookie.net/gensin-impact/images/0/0a/Character_Barbara_Card.png" alt="Barbara">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🗺️ Regions of Teyvat</h2>
+    <p>Genshin Impact currently features these major regions:</p>
+    <ul>
+      <li><strong>Mondstadt</strong> – Wind/Anemo nation, early quests and exploration</li>
+      <li><strong>Liyue</strong> – Geo region, full of treasures and contracts</li>
+      <li><strong>Inazuma</strong> – Electro-focused islands under strict rule</li>
+      <li><strong>Sumeru</strong> – Nature and Dendro-themed forest/city region</li>
+    </ul>
+    <img src="https://cdn.oneesports.gg/cdn-data/2022/12/GenshinImpact_TeyvatMap_AllRegions.jpg" alt="Teyvat Map" class="responsive">
+  </div>
+
+  <div class="section">
+    <h2>🔧 Beginner Tips</h2>
+    <ul>
+      <li>Save Primogems for limited-time banners, not standard wishes.</li>
+      <li>Use Resin wisely to farm weekly bosses and domains.</li>
+      <li>Level artifacts only at Adventure Rank 40+.</li>
+      <li>Elemental synergy is more important than pure damage early on.</li>
+    </ul>
+  </div>
+
+  <a href="gaming-guide.html" class="back-btn">← Back to Guide Gallery</a>
+</main>
+
+<script>
+  window.addEventListener("load", () => {
+    const screen = document.getElementById("loadingScreen");
+    const content = document.getElementById("content");
+    setTimeout(() => {
+      screen.style.opacity = "0";
+      content.style.display = "block";
+      setTimeout(() => screen.style.display = "none", 1000);
+    }, 2500);
+  });
+</script>
+
+</body>
+</html>
